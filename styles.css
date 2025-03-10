@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe4e1, #ffcdd2);
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #333;
+}
+
+/* Center container for the puzzle and stats */
+.game-container {
+  display: inline-block;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+}
+
+/* The puzzle board */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+}
+
+td {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: lightpink; 
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+
+/* Buttons */
+button {
+  background: #7d4f50;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  font-family: 'Quicksand', sans-serif;
+
+}
+button:hover {
+  background: #f3b391;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* (moves/time) */
+#stats {
+  margin-top: 10px;
+}
+
+/* How-to-Play Buttons */
+#howtoplay {
+  background-color: #7d4f50; 
+  border: none;
+  font-size: 28px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#howtoplay:hover {
+  background-color: #f3b391; 
+  transform: scale(1.1);  
+}
+
+/* Modal Styling */
+#play {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 90%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#play p {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+#closeModal {
+  background: #7d4f50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#closeModal:hover {
+  background: #7d4f50;
+  transform: scale(1.05);  
+}
+
+#play strong {
+  color: #7d4f50;
+  font-size: 18px;
+}
+
+
+/* Spans the entire screen */
+#heartsContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  overflow: hidden;
+  z-index: 9999;       /* put hearts everywhere */
+}
+
+/* heart element */
+.heart {
+  position: absolute;
+  bottom: -50px;         
+  font-size: 2rem;         
+  color: #7d4f50;        
+  animation: floatUp 5s linear forwards;
+  opacity: 0;
+}
+
+/* floating animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+.tile1  { background: url("./image.png") no-repeat 0px 0px; }
+.tile2  { background: url("./image.png") no-repeat -90px 0px; }
+.tile3  { background: url("./image.png") no-repeat -180px 0px; }
+.tile4  { background: url("./image.png") no-repeat -270px 0px; }
+.tile5  { background: url("./image.png") no-repeat 0px -90px; }
+.tile6  { background: url("./image.png") no-repeat -90px -90px; }
+.tile7  { background: url("./image.png") no-repeat -180px -90px; }
+.tile8  { background: url("./image.png") no-repeat -270px -90px; }
+.tile9  { background: url("./image.png") no-repeat 0px -180px; }
+.tile10 { background: url("./image.png") no-repeat -90px -180px; }
+.tile11 { background: url("./image.png") no-repeat -180px -180px; }
+.tile12 { background: url("./image.png") no-repeat -270px -180px; }
+.tile13 { background: url("./image.png") no-repeat 0px -270px; }
+.tile14 { background: url("./image.png") no-repeat -90px -270px; }
+.tile15 { background: url("./image.png") no-repeat -180px -270px; }
+.tile16 { 
+  background: lightpink;
+  cursor: default;
+}
